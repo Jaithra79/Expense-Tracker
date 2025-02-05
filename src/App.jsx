@@ -1,5 +1,7 @@
 import './App.css'
-import Product from './Product'
+import Products from './Products'
+import Home from './Home'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
 
@@ -7,9 +9,20 @@ function App() {
     <>
       <h1>Hello Everyone</h1>
       
-      <Product name = "Iphone 14" price={130000}/>
-      <Product name = "Samsung A12" price={20000}/>
-    </>
+      <BrowserRouter>
+
+          <Routes>
+
+              <Route path='/home' element={<Home />}/>
+              <Route path='/products' element={<Products />}/>
+
+          </Routes>
+
+
+      </BrowserRouter>
+
+      
+      </>
   )
 }
 
