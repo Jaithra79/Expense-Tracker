@@ -1,6 +1,7 @@
 import './App.css'
-import Products from './Products'
-import Home from './Home'
+import Products from './pages/Products'
+import Home from './pages/Home'
+import Navigation from './components/Navigation'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       <h1>Hello Everyone</h1>
       
       <BrowserRouter>
-
+       
+       <Navigation/>
           <Routes>
 
               <Route path='/home' element={<Home />}/>
